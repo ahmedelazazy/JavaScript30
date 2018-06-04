@@ -29,7 +29,7 @@
     minuteHand.style.transform =  `rotate(${minutesDegreeInt}deg)`;
 
     var hours = now.getHours();
-    var hoursDegree = 360/12*hours + 360/12/60*minutes; //and ignore the seconds effect: 360/12/60/60*seconds + 90
+    var hoursDegree = 360/12*hours + 360/12/60*minutes + 90; //and ignore the seconds effect: 360/12/60/60*seconds 
     var hoursDegreeInt = Math.floor(hoursDegree);
     hourHand.style.transition = hours == 0 ? "" : "transform 0.2s ease-out";
     hourHand.style.transform =  `rotate(${hoursDegreeInt}deg)`;
